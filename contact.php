@@ -7,8 +7,8 @@ $subject = $_POST['c_subject'];
 $message = $_POST['c_message'];
 if (!empty($first_name) || !empty($last_name) || !empty($email) || !empty($subject) || !empty($message)) {
     $host = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "mysql";
+    $dbUsername = "dwayne";
+    $dbPassword = "DRFJFKD8080";
     $dbname = "sportz";
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
