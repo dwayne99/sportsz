@@ -78,8 +78,43 @@
         <div class="row align-items-center justify-content-start">
           <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
             <h1 class="bg-text-line">Meet The Team</h1>
-            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maxime velit nostrum praesentium voluptatem. Mollitia perferendis dolore dolores.</p>
+            <p class="mt-4">The supreme quality for leadership is unquestionably integrity. Without it, no real success is possible, no matter whether it is on a section gang, a football field, in an army, or in an office.</p>
           </div>
+	          	<form class="col-md-6 text-center text-md-left"  method="POST">
+		          <div class="">
+		            <select class="form-control" id="sel1" name="team1">
+
+		            	<?php 
+		            	$host = "localhost";
+					    $dbUsername = "dwayne";
+					    $dbPassword = "DRFJFKD8080";
+					    $dbname = "sportz";
+					    $query = "SELECT * FROM teams";
+					    //create connection
+					    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+					    if (mysqli_connect_error()) {
+					     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
+					     // echo "theres an error";
+					    } else {
+					    	// echo "connection created";
+					    	$result = mysqli_query($conn, $query);
+					    	while($row = mysqli_fetch_assoc($result)){
+					    		$team = $row['Country'];	
+
+					    		echo"<option value='$team'>$team</option>";
+					    	}
+
+						}
+		            	 ?>
+		              
+		            </select>
+		          </div>
+		          <div class="col-md-6 text-center form-group container">
+                  <div class="col-lg-12">
+                    <input type="submit" name="submit" class="btn btn-primary" value="Go">
+                  </div>
+                </div>
+          </form>
         </div>
       </div>
     </div>
@@ -92,200 +127,44 @@
           </div>
         </div>
         <div class="row">
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">10</span>
-              <img src="images/img_1_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Guzman</h2>
-              <span class="position">Coach</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">4</span>
-              <img src="images/img_4_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Caballero</h2>
-              <span class="position">Defender</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">8</span>
-              <img src="images/img_3_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Mercado</h2>
-              <span class="position">Goal Keeper</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">5</span>
-              <img src="images/img_1_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Fazio</h2>
-              <span class="position">Defender</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">3</span>
-              <img src="images/img_4_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Perez</h2>
-              <span class="position">Midfielder</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">2</span>
-              <img src="images/img_3_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Marcos</h2>
-              <span class="position">Forward</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">10</span>
-              <img src="images/img_1_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Guzman</h2>
-              <span class="position">Coach</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">4</span>
-              <img src="images/img_4_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Caballero</h2>
-              <span class="position">Defender</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">8</span>
-              <img src="images/img_3_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Mercado</h2>
-              <span class="position">Goal Keeper</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">5</span>
-              <img src="images/img_1_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Fazio</h2>
-              <span class="position">Defender</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">3</span>
-              <img src="images/img_4_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Perez</h2>
-              <span class="position">Midfielder</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">2</span>
-              <img src="images/img_3_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Marcos</h2>
-              <span class="position">Forward</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">10</span>
-              <img src="images/img_1_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Guzman</h2>
-              <span class="position">Coach</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">4</span>
-              <img src="images/img_4_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Caballero</h2>
-              <span class="position">Defender</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">8</span>
-              <img src="images/img_3_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Mercado</h2>
-              <span class="position">Goal Keeper</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">5</span>
-              <img src="images/img_1_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Fazio</h2>
-              <span class="position">Defender</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">3</span>
-              <img src="images/img_4_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Perez</h2>
-              <span class="position">Midfielder</span>
-            </div>
-          </div>
-          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
-            <div class="player mb-5">
-              <span class="team-number">2</span>
-              <img src="images/img_3_sq.jpg" alt="Image" class="img-fluid image rounded-circle">
-              <h2>Marcos</h2>
-              <span class="position">Forward</span>
-            </div>
-          </div>
-        </div>
+        	<?php 
+        	$query = "SELECT * FROM players WHERE Team='ARGENTINA'";
+        	if(isset($_POST['submit'])){
+					$country = $_POST['team1'];  // Storing Selected Value In Variable
+					$query = "SELECT * FROM players WHERE Team='$country'";
+					}
+					$result = mysqli_query($conn, $query);
+					$i=0;
+					while($row = mysqli_fetch_assoc($result)){
+					    		$sn = $row['squadNo'];	
+					    		$name = $row['name'];	
+					    		$pos = $row['position'];	
+					    		$age = $row['age'];	
+					    		$mp = $row['mp'];	
+					    		$goals = $row['goals'];
+
+					          echo"<div class='mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center'>";
+					            echo"<div class='player mb-5'>";
+					              echo"<span class='team-number'>$sn</span>";
+					      
+					              echo"<img src='images/img_1_sq.jpg' alt='Image' class='img-fluid image rounded-circle'>";
+					              echo"<h2>$name</h2>";
+					              echo"<h4><span class='position '>$pos</span></h4>";
+					              echo"<h6>Age:$age</h6>";
+					              echo"<h6>Played:$mp</h6>";
+					              echo"<h6>Goals:$goals</h6>";
+					            echo"</div>";
+					          echo"</div>";
+					        
+					    	}
+
+        	 ?>
+          
 
       </div>
     </div>
   
-
-    <div class="site-section feature-blocks-1 no-margin-top">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-12 text-center">
-            <h2 class="text-black">Match Highlights</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="100">
-            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_1.jpg');">
-              <div class="text">
-                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="200">
-            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_2.jpg');">
-              <div class="text">
-                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="300">
-            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_3.jpg');">
-              <div class="text">
-                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <footer class="site-footer border-top">
       <div class="container">
@@ -411,8 +290,3 @@
 </html>
 
 
-
-
-<?php  
-	
-?>

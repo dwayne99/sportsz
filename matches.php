@@ -113,7 +113,7 @@
           	<!-- start row -->
 
 	          	<?php  
-
+	          		$query = "SELECT * FROM fixtures WHERE Stage IN ('A','B','C','D','E','F','G','H')";
 	          		if(isset($_POST['submit'])){
 					$selected_val = $_POST['match'];  // Storing Selected Value In Variable
 					if($selected_val=='gs'){$query = "SELECT * FROM fixtures WHERE Stage IN ('A','B','C','D','E','F','G','H')";}

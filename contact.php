@@ -150,45 +150,6 @@
 
    
 
-   <!--  <div class="site-section feature-blocks-1 no-margin-top">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-12 text-center">
-            <h2 class="text-black">Match Highlights</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="100">
-            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_1.jpg');">
-              <div class="text">
-                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="200">
-            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_2.jpg');">
-              <div class="text">
-                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="300">
-            <div class="p-3 p-md-5 feature-block-1 mb-5 mb-lg-0 bg" style="background-image: url('images/img_3.jpg');">
-              <div class="text">
-                <h2 class="h5 text-white">Russia's World Cup Championship</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <footer class="site-footer border-top">
       <div class="container">
         <div class="row">
@@ -320,23 +281,23 @@ $email = $_POST['c_email'];
 $subject = $_POST['c_subject'];
 $message = $_POST['c_message'];
 if (!empty($first_name) || !empty($last_name) || !empty($email) || !empty($subject) || !empty($message)) {
-    $host = "localhost";
-    $dbUsername = "dwayne";
-    $dbPassword = "DRFJFKD8080";
-    $dbname = "sportz";
-    //create connection
-    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
-    if (mysqli_connect_error()) {
-     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-     // echo "theres an error";
+        $host = "localhost";
+        $dbUsername = "dwayne";
+        $dbPassword = "DRFJFKD8080";
+        $dbname = "sportz";
+        //create connection
+        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+        if (mysqli_connect_error()) {
+         die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
+         // echo "theres an error";
+        } else {
+         $INSERT = "INSERT Into contact (first_name, last_name, email, subject, message) values('$first_name', '$last_name', '$email', '$subject', '$message')";
+          $stmt = $conn->prepare($INSERT);
+          $stmt->execute();
+         $stmt->close();
+         $conn->close();
+        }
     } else {
-     $INSERT = "INSERT Into contact (first_name, last_name, email, subject, message) values('$first_name', '$last_name', '$email', '$subject', '$message')";
-      $stmt = $conn->prepare($INSERT);
-      $stmt->execute();
-     $stmt->close();
-     $conn->close();
-    }
-} else {
  // echo "All field are required";
  die();
 }
