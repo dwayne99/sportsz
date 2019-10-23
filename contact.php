@@ -311,6 +311,7 @@
     
   </body>
 </html>
+
 <?php
 
 $first_name = $_POST['c_fname'];
