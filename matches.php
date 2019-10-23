@@ -1,11 +1,13 @@
+<?php 
 
+?>
 
 
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sportz &mdash; Colorlib Sports Team Template</title>
+    <title>Sportz </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -66,13 +68,11 @@
           <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
           <ul class="site-menu js-clone-nav d-none d-md-block">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li><a href="matches.html">Matches</a></li>
-            <li><a href="team.html">Team</a></li>
+            <li><a  href="index.html">Home</a></li>
+            <li class="active"><a  href="http://localhost/sportz/matches.php">Matches</a></li>
+            <li><a href="http://localhost/sportz/team.php">Team</a></li>
             <li><a href="about.html">About</a></li>
-            <li class="active"><a href="contact.html">Contact</a></li>
+            <li><a href="http://localhost/sportz/contact.php">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -89,7 +89,7 @@
           <div class="">
             <select class="form-control" id="sel1">
               <option value="gs">Group Stage</option>
-              <option value="ros">Round of 116</option>
+              <option value="ros">Round of 16</option>
               <option value="qf">Quater-finals</option>
               <option value="sf">Semi-finals</option>
               <option value="fin">Finals</option>
