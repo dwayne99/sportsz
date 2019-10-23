@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -81,16 +85,24 @@
             <h1 class="bg-text-line">Match</h1>
             <p class="mt-4">Today I will do what others won't, so tomorrow I can accomplish what others can't.</p>
           </div>
-
-          <div class="col-md-6 text-center form-group container">
+          <form class="col-md-6 text-center text-md-left" action="matches.php" method="POST">
+          <div class="">
             <select class="form-control" id="sel1">
-              <option>Group Stage</option>
-              <option>Round of 16</option>
-              <option>Quater-finals</option>
-              <option>Semi-finals</option>
-              <option>Finals</option>
+              <option value="gs">Group Stage</option>
+              <option value="ros">Round of 116</option>
+              <option value="qf">Quater-finals</option>
+              <option value="sf">Semi-finals</option>
+              <option value="fin">Finals</option>
             </select>
           </div>
+          <div class="col-md-6 text-center form-group container">
+                  <div class="col-lg-12">
+                    <input type="submit" name="button" class="btn btn-primary" value="Go">
+                  </div>
+                </div>
+          </form>
+          
+
         </div>
       </div>
     </div>
