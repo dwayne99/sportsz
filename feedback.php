@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sportz </title>
+    <title>Sportz</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,7 +31,6 @@
           <a href="#"><img src="images/logo.png" alt="Image"></a>
         </div>
         <div class="site-mobile-menu-close mt-3">
-          
           <span class="icon-close2 js-menu-toggle"></span>
         </div>
       </div>
@@ -50,7 +49,7 @@
             </div>
             <div class="col-6 col-md-9 text-right">
               <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">sportz@gmail.com</span></a></div>
-              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-phone mr-0 mr-md-3"></span> <span class="d-none d-md-block">+19 808 0408 321</span></a></div>
+              <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-phone mr-0 mr-md-3"></span> <span class="d-none d-md-block">+91 808 4087 212</span></a></div>
             </div>
           </div>
         </div>
@@ -65,143 +64,105 @@
 
           <ul class="site-menu js-clone-nav d-none d-md-block">
             <li><a  href="index.html">Home</a></li>
-            <li class="active"><a  href="http://localhost/sportz/matches.php">Matches</a></li>
+            <li><a href="http://localhost/sportz/matches.php">Matches</a></li>
             <li><a href="http://localhost/sportz/team.php">Team</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="http://localhost/sportz/contact.php">Contact</a></li>
-            <li ><a href="http://localhost/sportz/feedback.php">Feedback</a></li>
+            <li ><a href="http://localhost/sportz/contact.php">Contact</a></li>
+            <li class="active"><a href="http://localhost/sportz/feedback.php">Feedback</a></li>
           </ul>
         </div>
       </nav>
     </header>
   
-    <div class="site-blocks-cover overlay" style="background-image: url(images/matches_wallpaper.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay" style="background-image: url(images/about_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-start">
           <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
-            <h1 class="bg-text-line">Match</h1>
-            <p class="mt-4">Today I will do what others won't, so tomorrow I can accomplish what others can't.</p>
+            <h1 class="bg-text-line">Feedback</h1>
+            <p class="mt-4">Help us on how we could improve</p>  
+            <p class="mt-4">You are contributing when you are giving us your feedback</p>
           </div>
-          <form class="col-md-6 text-center text-md-left"  method="POST">
-          <div class="">
-            <select class="form-control" id="sel1" name="match">
-              <option value="gs">Group Stage</option>
-              <option value="ros">Round of 16</option>
-              <option value="qf">Quater-finals</option>
-              <option value="sf">Semi-finals</option>
-              <option value="fin">Finals</option>
-            </select>
-          </div>
-          <div class="col-md-6 text-center form-group container">
-                  <div class="col-lg-12">
-                    <input type="submit" name="submit" class="btn btn-primary" value="Go">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-first">
+          <div class="col-md-7">
+            <form action="feedback.php" method="post" class="bg-white">
+              
+              <div class="p-3 p-lg-5 border">
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_fname" name="c_fname">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_lname" name="c_lname">
                   </div>
                 </div>
-          </form>
-          
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="c_email" name="c_email" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_subject" class="text-black">What was your first impression when you entered the website? </label>
+                    <input type="text" class="form-control" id="c_subject1" name="c_subject1">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_subject" class="text-black">How did you first hear about us?</label>
+                    <input type="text" class="form-control" id="c_subject2" name="c_subject2">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_subject" class="text-black">Is there anything missing?</label>
+                    <input type="text" class="form-control" id="c_subject3" name="c_subject3">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_subject" class="text-black">How likely are you to recommend us?</label>
+                    <input type="text" class="form-control" id="c_subject4" name="c_subject4">
+                  </div>
+                </div>
 
-        </div>
-      </div>
-    </div>
-
-    
-    <div class="site-section site-blocks-vs">
-      <div class="container">
-   
-        <div class="row align-items-center mb-5">
-          <div class="col-md-12">
-
-          	<!-- start row -->
-
-	          	<?php  
-	          		$query = "SELECT * FROM fixtures WHERE Stage IN ('A','B','C','D','E','F','G','H')";
-	          		if(isset($_POST['submit'])){
-					$selected_val = $_POST['match'];  // Storing Selected Value In Variable
-					if($selected_val=='gs'){$query = "SELECT * FROM fixtures WHERE Stage IN ('A','B','C','D','E','F','G','H')";}
-					elseif($selected_val=='ros'){$query = "SELECT * FROM fixtures WHERE Stage='16'";}
-					elseif($selected_val=='qf'){$query = "SELECT * FROM fixtures WHERE Stage='QF'";}
-					elseif($selected_val=='sf'){$query = "SELECT * FROM fixtures WHERE Stage='SM'";}
-					elseif($selected_val=='fin'){$query = "SELECT * FROM fixtures WHERE Stage='FIN'";}
-					}
-						$host = "localhost";
-					    $dbUsername = "dwayne";
-					    $dbPassword = "DRFJFKD8080";
-					    $dbname = "sportz";
-					    //create connection
-					    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
-					    if (mysqli_connect_error()) {
-					     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-					     // echo "theres an error";
-					    } else {
-					    	// echo "connection created";
-
-					    	
-					    	$result = mysqli_query($conn, $query);
-
-					    	while($row = mysqli_fetch_assoc($result)){
-					    		$no = $row['matchNo'];
-					    		$date = $row['Date'];
-					    		$time = $row['Time'];
-					    		$location = $row['Location'];
-					    		$t1 = $row['Team_1'];
-					    		$t2 = $row['Team_2'];
-					    		$res = $row['Result'];
-					    		
-				            echo"<div class='row bg-white align-items-center ml-0 mr-0 py-4 match-entry'>";
-				              echo"<div class='col-md-4 col-lg-4 mb-4 mb-lg-0'>";
-
-				                echo"<div class='text-center text-lg-left'>";
-				                  echo"<div class='d-block d-lg-flex align-items-center'>";
-				                    echo"<div class='image image-small text-center mb-3 mb-lg-0 mr-lg-3'>";
-				                      echo"<img src='images/img_1_sq.jpg' alt='Image' class='img-fluid'>";
-				                    echo"</div>";
-				                    echo"<div class='text'>";
-				                      echo"<h3 class='h5 mb-0 text-black'>$t1</h3>";
-				                      // echo"<span class='text-uppercase small country'>Brazil</span>";
-				                    echo"</div>";
-				                  echo"</div>";
-				                echo"</div>";
-
-				              echo"</div>";
-				              echo"<div class='col-md-4 col-lg-4 text-center mb-4 mb-lg-0'>";
-				                echo"<div class='d-inline-block'>";
-				                  echo"<div class='bg-black py-2 px-4 mb-2 text-white d-inline-block rounded'><span class='h5'>$res<br><h6>$date</h6><h6>$time</h6></span></div>";
-				                echo"</div>";
-				              echo"</div>";
-
-				              echo"<div class='col-md-4 col-lg-4 text-center text-lg-right'>";
-				                echo"<div class=''>";
-				                  echo"<div class='d-block d-lg-flex align-items-center'>";
-				                    echo"<div class='image image-small ml-lg-3 mb-3 mb-lg-0 order-2'>";
-				                      echo"<img src='images/img_4_sq.jpg' alt='Image' class='img-fluid'>";
-				                    echo"</div>";
-				                    echo"<div class='text order-1 w-100'>";
-				                      echo"<h3 class='h5 mb-0 text-black'>$t2</h3>";
-				                      // echo"<span class='text-uppercase small country'>London</span>";
-				                    echo"</div>";
-				                  echo"</div>";
-				               echo"</div>";
-				              echo"</div>";
-				            echo"</div>";
-
-					    	}
-
-					     $conn->close();
-					    }
-
-				?>
-
-
-
-            <!-- END row -->
-
-
+            
+                <div class="form-group row">
+                  <div class="col-lg-12">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send Message">
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
 
+          <div class="col-md-5">
+            <div class="p-4 border mb-3 bg-white">
+           
+              <p class="mb-0">Phone</p>
+              <p class="mb-4"><a href="#">91 802 3532 351</a></p>
+
+              <p class="mb-0">Email Address</p>
+              <p class="mb-4"><a href="#">sportz@gmail.com</a></p>
+
+            </div>
+            
+          </div>
+         
         </div>
-  
       </div>
     </div>
+
+   
 
     <footer class="site-footer border-top">
       <div class="container">
@@ -326,6 +287,35 @@
   </body>
 </html>
 
+<?php
 
-
+$first_name = $_POST['c_fname'];
+$last_name = $_POST['c_lname'];
+$email = $_POST['c_email'];
+$q1 = $_POST['c_subject1'];
+$q2 = $_POST['c_subject2'];
+$q3 = $_POST['c_subject3'];
+$q4 = $_POST['c_subject4'];
+if (!empty($first_name) || !empty($last_name) || !empty($email) || !empty($q1) || !empty($q2)|| !empty($q3)|| !empty($q4)) {
+        $host = "localhost";
+        $dbUsername = "dwayne";
+        $dbPassword = "DRFJFKD8080";
+        $dbname = "sportz";
+        //create connection
+        $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+        if (mysqli_connect_error()) {
+         die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
+          echo "theres an error";
+        } else {
+         $INSERT = "INSERT Into feedback (first_name, last_name, email, `1`, `2`,`3`,`4`) values('$first_name', '$last_name', '$email', '$q1', '$q2','$q3','$q4')";
+          $stmt = $conn->prepare($INSERT);
+          $stmt->execute();
+         $stmt->close();
+         $conn->close();
+        }
+    } else {
+ // echo "All field are required";
+ die();
+}
+?>
 

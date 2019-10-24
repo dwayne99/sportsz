@@ -68,6 +68,7 @@
             <li><a href="http://localhost/sportz/team.php">Team</a></li>
             <li><a href="about.html">About</a></li>
             <li class="active"><a href="http://localhost/sportz/contact.php">Contact</a></li>
+            <li ><a href="http://localhost/sportz/feedback.php">Feedback</a></li>
           </ul>
         </div>
       </nav>
